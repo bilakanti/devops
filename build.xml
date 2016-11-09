@@ -1,14 +1,19 @@
-me="test"  default="create"  basedir=".">
+<?xml version="1.0"?>
+<project name="test"  default="create"  basedir=".">
 
-        <target name="create"    depends="delete">
-
+   <target name="create"    depends="delete">
         <mkdir dir="d1"/>
         <mkdir dir="d2"/>
-        </target>
-        <target name="delete">
+    </target>
+
+    <target name="delete"    depends="info">
         <delete dir="d1"/>
         <delete dir="d2"/>
+    </target>
+ <target name="info">
+        <echo> welcome to ant </echo>
         </target>
 </project>
+
 
 
